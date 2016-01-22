@@ -1,0 +1,24 @@
+{
+  "name": "angular-test-bed-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {},
+  "devDependencies": {
+    "copyfiles": "^0.2.1",
+    "css-loader": "^0.23.1",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.13.0",
+    "stylus-loader": "^1.5.0",
+    "trash": "^3.4.1",
+    "webpack": "^1.12.11"
+  },
+  "scripts": {
+    "prepare": "npm install -g trash-cli webpack webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "xdev": "webpack && copyfiles -f ./src/index.html build",
+    "dev": "trash build/js --force && webpack-dev-server -d --config webpack.config.live.js --progress --content-base build/ --hot --inline"
+  },
+  "author": "",
+  "license": "ISC"
+}
